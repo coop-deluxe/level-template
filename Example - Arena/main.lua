@@ -5,12 +5,12 @@
 LEVEL_ARENA_EXAMPLE = level_register('level_arena_example_entry', COURSE_NONE, 'Example', 'example', 28000, 0x28, 0x28, 0x28)
 
 -- make sure we don't add the level twice
-local sAddedLevels = false
+local addedLevels = false
 
-function on_level_init()
+local function on_level_init()
     -- make sure we don't add the level twice
-    if sAddedLevels then return end
-    sAddedLevels = true
+    if addedLevels then return end
+    addedLevels = true
 
     -- make sure Arena was loaded
     if not _G.Arena then
